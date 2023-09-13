@@ -1,19 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes, Switch } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import Home from './Components/HomePage';
-import Filter from './Components/Filter';
 import RestaurantPage from './Components/RestaurantPage';
+import RestaurantForm from './Components/RestaurantForm';
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Switch>
+      <Routes>
+          <Route path='/add' element={<RestaurantForm />} />
+          <Route path='/restaurants' element={<RestaurantPage />} />
+          <Route exact path='/' element={<Home />} />
+      </Routes>
+      {/* <Switch>
         <Route path='/add'>
-          <Filter />
+          <RestaurantForm/>
         </Route>
         <Route path='/restaurants'>
           <RestaurantPage />
@@ -21,7 +26,7 @@ function App() {
         <Route path='/'>
           <Home />
         </Route>
-      </Switch>
+      </Switch> */}
     </div>
   );
 }
