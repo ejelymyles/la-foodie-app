@@ -9,8 +9,19 @@ import RestaurantPage from './Components/RestaurantPage';
 
 function App() {
   return (
-    <div className="App">
-      LA Foodie App
+    <div>
+      <NavBar />
+      <Switch>
+        <Route path='/add'>
+          <Filter />
+        </Route>
+        <Route path='/restaurants'>
+          <RestaurantPage />
+        </Route>
+        <Route path='/'>
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
