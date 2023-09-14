@@ -1,9 +1,17 @@
 import React from "react";
 
-function RestaurantCard(){
+function RestaurantCard({ restaurant }){
+
+    const{id, name, cuisine, price, location} = restaurant
+
     return(
         <div>
-            <h1>Add Card structure here</h1>
+            <li className="card">
+                <h4>{name}</h4>
+                <p>{cuisine}</p>
+                <p>Price Range: {price}</p>
+                <p>{location}</p>
+            </li>
         </div>
     )
 }
