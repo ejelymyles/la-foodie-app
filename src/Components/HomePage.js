@@ -6,7 +6,6 @@ function Home(){
         <div>
             <h1>Find A Reastaurant Here</h1>
             <Filter />
-
         </div>
     );
 }

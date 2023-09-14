@@ -29,7 +29,7 @@ function Filter(){
               <option value="Thai">Thai</option>
             </select>
           </label>
-          <br />
+    
           <label>
             Location:
             <select>
@@ -41,7 +41,7 @@ function Filter(){
               <option value="North LA">North LA</option>
             </select>
           </label>
-          <br />
+          
           <label>
             Price:
             <select>
@@ -51,7 +51,7 @@ function Filter(){
               <option value="$$$$">$$$$</option>
             </select>
           </label>
-          <br />
+          
           <button type="submit">Search</button>
         </form>
       </div>
