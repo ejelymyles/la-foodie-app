@@ -1,6 +1,6 @@
 import React from "react";
 
-function RestaurantPage(){
+function RestaurantPage({ restaurants }){
     return(
         <div>
             <h1>Add data here</h1>

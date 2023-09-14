@@ -24,7 +24,7 @@ useEffect(() => {
       <Header />
       <Routes>
           <Route path='/add' element={<RestaurantForm />} />
-          <Route path='/restaurants' element={<RestaurantPage />} />
+          <Route path='/restaurants' element={<RestaurantPage restaurants={resyData} />} />
           <Route exact path='/' element={<Home />} />
       </Routes>
     </div>
