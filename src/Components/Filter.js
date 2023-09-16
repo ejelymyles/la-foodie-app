@@ -3,6 +3,7 @@ import React from "react";
 function Filter(){
     return (
         <div>
+            <h1>Find A Reastaurant Here</h1>
         <form>
           <label>
             Cuisine:
