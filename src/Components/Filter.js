@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useState }from "react";
+import RestaurantCard from "./RestaurantCard";
+
 
 function Filter(){
+    const[formData, setFormData] = useState({
+        cuisine: "",
+        location: "",
+        price: "",
+    });
+
+    const[filteredData, setFilteredData] = useState([]);
+
+    function handleChange(e){
+        const {name, value} =e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        })
+        console.log(formData)
+    }
+
+    
+
     return (
         <div>
             <h1>Find A Reastaurant Here</h1>
         <form>
           <label>
             Cuisine:
-            <select>
+            <select name="cuisine" value={formData.cuisine} onChange={handleChange}>
               <option value="American">American</option>
               <option value="BBQ">BBQ</option>
               <option value="Chinese">Chinese</option>
@@ -32,7 +53,7 @@ function Filter(){
           </label>
           <label>
             Location:
-            <select>
+            <select name="location" value={formData.location} onChange={handleChange}>
               <option value="Downtown">Downtown</option>
               <option value="Central LA">Central LA</option>
               <option value="West LA">West LA</option>
@@ -43,7 +64,7 @@ function Filter(){
           </label>
           <label>
             Price:
-            <select>
+            <select name="price" value={formData.price} onChange={handleChange}>
               <option value="$">$</option>
               <option value="$$">$$</option>
               <option value="$$$">$$$</option>
