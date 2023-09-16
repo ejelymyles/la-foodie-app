@@ -2,7 +2,7 @@ import React, { useState }from "react";
 import RestaurantCard from "./RestaurantCard";
 
 
-function Filter(){
+function Filter({ restaurants }){
     const[formData, setFormData] = useState({
         cuisine: "",
         location: "",
@@ -12,7 +12,7 @@ function Filter(){
     const[filteredData, setFilteredData] = useState([]);
 
     function handleChange(e){
-        const {name, value} =e.target;
+        const {name, value} = e.target;
         setFormData({
             ...formData,
             [name]: value,
@@ -20,12 +20,28 @@ function Filter(){
         console.log(formData)
     }
 
+    function handleSubmit(e){
+        e.preventDefault();
+
+        fetch("http://localhost:3000/restaurants")
+        .then((resp) => resp.json())
+        .then((data) => {
+            const submittedData = restaurants.filter((restaurant) => {
+                return(
+                    (formData.cuisine === "" || formData.cuisine === restaurant.cuisine) &&
+                    (formData.location === "" || formData.location === restaurant.location) &&
+                    (formData.price === "" || formData.price === restaurant.price) 
+                );
+            });
+            setFilteredData(submittedData)
+        })
+    }
     
 
     return (
         <div>
             <h1>Find A Reastaurant Here</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>
             Cuisine:
             <select name="cuisine" value={formData.cuisine} onChange={handleChange}>

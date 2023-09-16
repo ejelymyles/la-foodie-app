@@ -25,7 +25,7 @@ useEffect(() => {
       <Routes>
           <Route path='/add' element={<RestaurantForm />} />
           <Route path='/restaurants' element={<RestaurantPage restaurants={resyData} />} />
-          <Route exact path='/' element={<Filter />} />
+          <Route exact path='/' element={<Filter restaurants={resyData} />} />
       </Routes>
     </div>
   );
