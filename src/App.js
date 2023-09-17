@@ -19,6 +19,10 @@ useEffect(() => {
   })
 }, [])
 
+function newResy (newRestauarnt){
+  setResyData((prevData) => [...prevData, newRestauarnt]);
+}
+
   return (
     <div>
       <Header />

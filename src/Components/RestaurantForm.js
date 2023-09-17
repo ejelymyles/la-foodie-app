@@ -17,6 +17,25 @@ function RestaurantForm(){
         console.log(addNewForm)
     }
 
+
+    // function handleAddNewForm (e){
+    //     e.preventDefault();
+    //     fetch("http://localhost:3000/restaurants", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             "name": addNewForm.name,
+    //             "cuisine": addNewForm.cuisine,
+    //             "price": addNewForm.price,
+    //             "location": addNewForm.location,
+    //         })
+    //     })
+    //     .then((r) => r.json())
+    //     .then(())
+
+
     return(
         <div>
             <form>
