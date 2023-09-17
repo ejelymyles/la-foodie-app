@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 function RestaurantForm(){
+
+    const [addNewForm, setAddNewForm] = useState({
+        name: "",
+        cuisine: "",
+        price: "",
+        location: "",
+    });
+    
     return(
         <div>
             <form>
@@ -15,6 +23,7 @@ function RestaurantForm(){
                 <div>
                     <label>Price</label>
                     <select name="price">
+                        <option value=""></option>
                         <option value="$">$</option>
                         <option value="$$">$$</option>
                         <option value="$$$">$$$</option>
@@ -24,6 +33,7 @@ function RestaurantForm(){
                 <div>
                     <label>Location</label>
                     <select name="location">
+                    <option value=""></option>
                         <option value="downtown">Downtown</option>
                         <option value="west la">West LA</option>
                         <option value="east la">East LA</option>

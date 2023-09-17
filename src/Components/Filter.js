@@ -35,11 +35,11 @@ function Filter({ restaurants }){
             });
             setFilteredData(submittedData)
 
-            // // setFormData({
-            // //     cuisine: "",
-            // //     location: "",
-            // //     price: "",
-            // })
+            setFormData({
+                cuisine: "",
+                location: "",
+                price: "",
+            })
         })
     }
     
