@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function RestaurantForm(){
+function RestaurantForm({ newResy }){
 
     const [addNewForm, setAddNewForm] = useState({
         name: "",
@@ -18,27 +18,35 @@ function RestaurantForm(){
     }
 
 
-    // function handleAddNewForm (e){
-    //     e.preventDefault();
-    //     fetch("http://localhost:3000/restaurants", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({
-    //             "name": addNewForm.name,
-    //             "cuisine": addNewForm.cuisine,
-    //             "price": addNewForm.price,
-    //             "location": addNewForm.location,
-    //         })
-    //     })
-    //     .then((r) => r.json())
-    //     .then(())
+    function handleAddNewForm (e){
+        e.preventDefault();
+        fetch("http://localhost:3000/restaurants", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "name": addNewForm.name,
+                "cuisine": addNewForm.cuisine,
+                "price": addNewForm.price,
+                "location": addNewForm.location,
+            })
+        })
+        .then((r) => r.json())
+        .then((newPlace) => newResy(newPlace));
+
+        setAddNewForm({
+            name: "",
+            cuisine: "",
+            price: "",
+            location: "",
+        })
+    }
 
 
     return(
         <div>
-            <form>
+            <form onSubmit={handleAddNewForm}>
                 <div>
                     <label>Name</label>
                     <input type="text" name="name" value={addNewForm.name} onChange={handleChange} />

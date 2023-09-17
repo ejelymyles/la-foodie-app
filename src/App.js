@@ -19,15 +19,15 @@ useEffect(() => {
   })
 }, [])
 
-function newResy (newRestauarnt){
-  setResyData((prevData) => [...prevData, newRestauarnt]);
+function newResy (newPlace){
+  setResyData((prevData) => [...prevData, newPlace ]);
 }
 
   return (
     <div>
       <Header />
       <Routes>
-          <Route path='/add' element={<RestaurantForm />} />
+          <Route path='/add' element={<RestaurantForm newResy={newResy} />} />
           <Route path='/restaurants' element={<RestaurantPage restaurants={resyData} />} />
           <Route exact path='/' element={<Filter restaurants={resyData} />} />
       </Routes>
