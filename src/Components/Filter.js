@@ -12,10 +12,9 @@ function Filter({ restaurants }){
     const[filteredData, setFilteredData] = useState([]);
 
     function handleChange(e){
-        const {name, value} = e.target;
         setFormData({
             ...formData,
-            [name]: value,
+            [e.target.name]: e.target.value,
         })
         console.log(formData)
     }

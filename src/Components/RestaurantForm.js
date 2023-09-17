@@ -10,10 +10,9 @@ function RestaurantForm(){
     });
 
     function handleChange(e){
-        const {name, value} = e.target;
         setAddNewForm({
             ...addNewForm,
-            [name]: value,
+            [e.target.name]: e.target.value,
         })
         console.log(addNewForm)
     }
