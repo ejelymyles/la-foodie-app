@@ -8,21 +8,30 @@ function RestaurantForm(){
         price: "",
         location: "",
     });
-    
+
+    function handleChange(e){
+        const {name, value} = e.target;
+        setAddNewForm({
+            ...addNewForm,
+            [name]: value,
+        })
+        console.log(addNewForm)
+    }
+
     return(
         <div>
             <form>
                 <div>
                     <label>Name</label>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" value={addNewForm.name} onChange={handleChange} />
                 </div>
                 <div>
                     <label>Cuisine</label>
-                    <input type="text" name="cuisine" />
+                    <input type="text" name="cuisine" value={addNewForm.cuisine} onChange={handleChange}/>
                 </div>
                 <div>
                     <label>Price</label>
-                    <select name="price">
+                    <select name="price" value={addNewForm.price} onChange={handleChange}>
                         <option value=""></option>
                         <option value="$">$</option>
                         <option value="$$">$$</option>
@@ -32,7 +41,7 @@ function RestaurantForm(){
                 </div>
                 <div>
                     <label>Location</label>
-                    <select name="location">
+                    <select name="location" value={addNewForm.location} onChange={handleChange}>
                     <option value=""></option>
                         <option value="downtown">Downtown</option>
                         <option value="west la">West LA</option>
