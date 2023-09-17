@@ -34,6 +34,12 @@ function Filter({ restaurants }){
                 );
             });
             setFilteredData(submittedData)
+
+            // // setFormData({
+            // //     cuisine: "",
+            // //     location: "",
+            // //     price: "",
+            // })
         })
     }
     
@@ -45,6 +51,7 @@ function Filter({ restaurants }){
           <label>
             Cuisine:
             <select name="cuisine" value={formData.cuisine} onChange={handleChange}>
+              <option value=""></option>
               <option value="American">American</option>
               <option value="BBQ">BBQ</option>
               <option value="Chinese">Chinese</option>
@@ -70,6 +77,7 @@ function Filter({ restaurants }){
           <label>
             Location:
             <select name="location" value={formData.location} onChange={handleChange}>
+              <option value=""></option>
               <option value="Downtown">Downtown</option>
               <option value="Central LA">Central LA</option>
               <option value="West LA">West LA</option>
@@ -81,6 +89,7 @@ function Filter({ restaurants }){
           <label>
             Price:
             <select name="price" value={formData.price} onChange={handleChange}>
+              <option value=""></option>
               <option value="$">$</option>
               <option value="$$">$$</option>
               <option value="$$$">$$$</option>
@@ -89,6 +98,10 @@ function Filter({ restaurants }){
           </label>
           <button type="submit">Search</button>
         </form>
+        
+        <div>
+            {filteredData.map((restaurant) => (<RestaurantCard key={restaurant.id} restaurant={restaurant} />))}
+        </div>
       </div>
     );
 }
