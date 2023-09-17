@@ -16,7 +16,6 @@ function Filter({ restaurants }){
             ...formData,
             [e.target.name]: e.target.value,
         })
-        console.log(formData)
     }
 
     function handleSubmit(e){

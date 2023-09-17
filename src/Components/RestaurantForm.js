@@ -14,7 +14,6 @@ function RestaurantForm({ newResy }){
             ...addNewForm,
             [e.target.name]: e.target.value,
         })
-        console.log(addNewForm)
     }
 
 
