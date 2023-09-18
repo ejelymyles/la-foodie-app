@@ -45,6 +45,7 @@ function RestaurantForm({ newResy }){
 
     return(
         <div>
+            <p className="add-message">Please use the form below to add more restaraunts to the directory</p>
             <form className="add-new-form" onSubmit={handleAddNewForm}>
                 <div>
                     <label className="add-new-label">Name</label>

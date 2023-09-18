@@ -47,6 +47,7 @@ div.cards {
   margin-right: 10px; /* Adjust this value as needed */
   margin-left: 10px;
   text-align: center;
+  font-size: 20px;
 }
 
 .search-here{
@@ -76,7 +77,7 @@ div.cards {
 }
 
 .add-new-label {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -116,4 +117,11 @@ div.cards {
   border-radius: 20px;
   width: 200px;
   background-color: #076eeb;
+}
+
+.add-message{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 60px;
 }
