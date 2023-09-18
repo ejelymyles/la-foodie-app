@@ -33,10 +33,12 @@ div.cards {
 .header {
   margin-bottom: 50px; /* Adjust the margin-bottom to your desired spacing */
   text-align: center;
+  /* background-color: rgb(200, 229, 248); */
 }
 
 .header-title {
   margin-bottom: 0px; /* Adjust this value as needed */
+  color: #076eeb;
 }
 
 .header-subtitle {
