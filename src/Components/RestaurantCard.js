@@ -7,7 +7,7 @@ function RestaurantCard({ restaurant }){
     return(
         <div>
             <li className="card">
-                <h4>{name}</h4>
+                <h2>{name}</h2>
                 <p>{cuisine}</p>
                 <p>Price Range: {price}</p>
                 <p>{location}</p>

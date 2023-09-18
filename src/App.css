@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+.card {
+  border: 7px solid #076eeb; /* Add a border to create the card effect */
+  
+  border-radius: 15px; /* Adjust the value to control the roundness */
+  padding: 10px; /* Add padding to space out the content */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+  background-color: rgb(200, 229, 248); /* Set the background color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns in each row */
+  grid-gap: 20px; /* Add some spacing between cards */
+  padding: 20px; /* Add spacing around the container */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card h4 {
+  margin: 0; /* Remove margin for the title */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card p {
+  margin: 4px 0; /* Add spacing between paragraphs */
 }
 
-.App-link {
-  color: #61dafb;
+ul.cards {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.cards {
+  list-style: none;
 }

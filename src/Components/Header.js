@@ -5,7 +5,7 @@ function Header(){
     return (
         <div>
             <h1>LA Food Finder</h1>
-            <h2>Use this app to find a place to eat!</h2>
+            <h4>Use this app to find a place to eat!</h4>
             <NavBar />
         </div>
     );

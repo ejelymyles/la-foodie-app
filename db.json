@@ -853,6 +853,13 @@
       "price": "$$",
       "location": "central la",
       "id": 122
+    },
+    {
+      "name": "Javiers",
+      "cuisine": "Mexican",
+      "price": "$$$",
+      "location": "central la",
+      "id": 123
     }
   ]
 }

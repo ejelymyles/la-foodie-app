@@ -44,7 +44,7 @@ function Filter({ restaurants }){
 
     return (
         <div>
-            <h1>Find A Reastaurant Here</h1>
+            <h2>Search For A Reastaurant Here</h2>
         <form onSubmit={handleSubmit}>
           <label>
             Cuisine:
@@ -97,7 +97,7 @@ function Filter({ restaurants }){
           <button type="submit">Search</button>
         </form>
         
-        <div>
+        <div className="cards card-container">
             {filteredData.map((restaurant) => (<RestaurantCard key={restaurant.id} restaurant={restaurant} />))}
         </div>
       </div>
