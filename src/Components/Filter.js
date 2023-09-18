@@ -44,11 +44,11 @@ function Filter({ restaurants }){
 
     return (
         <div>
-            <h2>Search For A Reastaurant Here</h2>
-        <form onSubmit={handleSubmit}>
-          <label>
+            <h2 className="search-here">Search For A Reastaurant Here</h2>
+        <form onSubmit={handleSubmit} className="search-form">
+          <label className="label">
             Cuisine:
-            <select name="cuisine" value={formData.cuisine} onChange={handleChange}>
+            <select name="cuisine" className="form-input1" value={formData.cuisine} onChange={handleChange}>
               <option value=""></option>
               <option value="American">American</option>
               <option value="BBQ">BBQ</option>
@@ -72,9 +72,9 @@ function Filter({ restaurants }){
               <option value="Thai">Thai</option>
             </select>
           </label>
-          <label>
+          <label className="label">
             Location:
-            <select name="location" value={formData.location} onChange={handleChange}>
+            <select name="location" className="form-input1" value={formData.location} onChange={handleChange}>
               <option value=""></option>
               <option value="Downtown">Downtown</option>
               <option value="Central LA">Central LA</option>
@@ -84,9 +84,9 @@ function Filter({ restaurants }){
               <option value="North LA">North LA</option>
             </select>
           </label>
-          <label>
+          <label className="label">
             Price:
-            <select name="price" value={formData.price} onChange={handleChange}>
+            <select name="price" className="form-input1" value={formData.price} onChange={handleChange}>
               <option value=""></option>
               <option value="$">$</option>
               <option value="$$">$$</option>
@@ -94,7 +94,7 @@ function Filter({ restaurants }){
               <option value="$$$$">$$$$</option>
             </select>
           </label>
-          <button type="submit">Search</button>
+          <button type="submit" className="btn1">Search</button>
         </form>
         
         <div className="cards card-container">

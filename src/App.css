@@ -29,3 +29,91 @@ ul.cards {
 div.cards {
   list-style: none;
 }
+
+.header {
+  margin-bottom: 50px; /* Adjust the margin-bottom to your desired spacing */
+  text-align: center;
+}
+
+.header-title {
+  margin-bottom: 0px; /* Adjust this value as needed */
+}
+
+.header-subtitle {
+  margin-top: 0px; /* Adjust this value as needed */
+}
+
+.nav-link {
+  margin-right: 10px; /* Adjust this value as needed */
+  margin-left: 10px;
+  text-align: center;
+}
+
+.search-here{
+  text-align: center;
+}
+
+.full-list-header {
+  text-align: center;
+}
+
+.label {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.search-form {
+  text-align: center;
+  font-size: 18px;
+}
+
+.add-new-form {
+  text-align: center;
+  width: 200px; /* Specify the width of the child element */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+.add-new-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-input1 {
+  width: 150px;
+  padding: 2px;
+  border: 3px solid #076eeb;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.btn1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: azure;
+  padding: 2px;
+  border: 1px solid #076eeb;
+  border-radius: 20px;
+  width: 150px;
+  background-color: #076eeb;
+}
+
+.form-input2 {
+  width: 200px;
+  padding: 5px;
+  border: 5px solid #076eeb;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.btn2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: azure;
+  padding: 5px;
+  border: 5px solid #076eeb;
+  border-radius: 20px;
+  width: 200px;
+  background-color: #076eeb;
+}
