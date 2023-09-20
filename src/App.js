@@ -29,7 +29,7 @@ function newResy (newPlace){
       <Routes>
           <Route path='/add' element={<RestaurantForm newResy={newResy} />} />
           <Route path='/restaurants' element={<RestaurantPage restaurants={resyData} />} />
-          <Route exact path='/' element={<Filter restaurants={resyData} />} />
+          <Route exact path='/' element={<Filter />} />
       </Routes>
     </div>
   );

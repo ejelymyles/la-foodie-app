@@ -13,7 +13,7 @@ function RestaurantForm({ newResy }){
         setAddNewForm({
             ...addNewForm,
             [e.target.name]: e.target.value,
-        })
+        }) 
     }
 
 
@@ -68,7 +68,7 @@ function RestaurantForm({ newResy }){
                 <div>
                     <label className="add-new-label">Location</label>
                     <select name="location" className="form-input2" value={addNewForm.location} onChange={handleChange}>
-                    <option value=""></option>
+                        <option value=""></option>
                         <option value="downtown">Downtown</option>
                         <option value="west la">West LA</option>
                         <option value="east la">East LA</option>

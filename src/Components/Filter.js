@@ -2,7 +2,7 @@ import React, { useState }from "react";
 import RestaurantCard from "./RestaurantCard";
 
 
-function Filter({ restaurants }){
+function Filter(){
     const[formData, setFormData] = useState({
         cuisine: "",
         location: "",
@@ -24,7 +24,7 @@ function Filter({ restaurants }){
         fetch("http://localhost:3000/restaurants")
         .then((resp) => resp.json())
         .then((data) => {
-            const submittedData = restaurants.filter((restaurant) => {
+            const submittedData = data.filter((restaurant) => {
                 return(
                     (formData.cuisine === "" || formData.cuisine === restaurant.cuisine) &&
                     (formData.location === "" || formData.location === restaurant.location) &&
