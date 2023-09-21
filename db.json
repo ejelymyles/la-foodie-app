@@ -895,6 +895,13 @@
       "price": "$",
       "location": "west la",
       "id": 128
+    },
+    {
+      "name": "Ocean Prime",
+      "cuisine": "Steakhouse",
+      "price": "$$$$",
+      "location": "central la",
+      "id": 129
     }
   ]
 }

@@ -9,7 +9,7 @@ function Filter({ restaurants }){
         price: "",
     });
 
-    const[filteredData, setFilteredData] = useState([]);
+    const[searchData, setSearchData] = useState([]);
 
     function handleChange(e){
         setFormData({
@@ -18,29 +18,7 @@ function Filter({ restaurants }){
         })
     }
 
-    // function handleSubmit(e){
-    //     e.preventDefault();
-
-    //     fetch("http://localhost:3000/restaurants")
-    //     .then((resp) => resp.json())
-    //     .then((data) => {
-    //         const submittedData = data.filter((restaurant) => {
-    //             return(
-    //                 (formData.cuisine === "" || formData.cuisine === restaurant.cuisine) &&
-    //                 (formData.location === "" || formData.location === restaurant.location) &&
-    //                 (formData.price === "" || formData.price === restaurant.price) 
-    //             );
-    //         });
-    //         setFilteredData(submittedData)
-
-    //         setFormData({
-    //             cuisine: "",
-    //             location: "",
-    //             price: "",
-    //         })
-    //     })
-    // }
-
+  
     function handleSubmit(e){
         e.preventDefault();
         const submittedData = restaurants.filter((restaurant) => {
@@ -49,7 +27,7 @@ function Filter({ restaurants }){
                     (formData.location === "" || formData.location === restaurant.location) &&
                     (formData.price === "" || formData.price === restaurant.price) 
                 )});
-            setFilteredData(submittedData)
+            setSearchData(submittedData)
 
             setFormData({
                 cuisine: "",
@@ -113,7 +91,7 @@ function Filter({ restaurants }){
         </form>
         
         <div className="cards card-container">
-            {filteredData.map((restaurant) => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)}
+            {searchData.map((restaurant) => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)}
         </div>
       </div>
     );
