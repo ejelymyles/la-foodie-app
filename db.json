@@ -860,6 +860,41 @@
       "price": "$$$",
       "location": "central la",
       "id": 123
+    },
+    {
+      "name": "Taco Bell ",
+      "cuisine": "Mexican",
+      "price": "$",
+      "location": "central la",
+      "id": 124
+    },
+    {
+      "name": "del taco",
+      "cuisine": "mexican",
+      "price": "$",
+      "location": "west la",
+      "id": 125
+    },
+    {
+      "name": "Heavy Handed",
+      "cuisine": "American",
+      "price": "$$",
+      "location": "west la",
+      "id": 126
+    },
+    {
+      "name": "Sushi Stop ",
+      "cuisine": "Japanese",
+      "price": "$$",
+      "location": "west la",
+      "id": 127
+    },
+    {
+      "name": "Main Chick ",
+      "cuisine": "American",
+      "price": "$",
+      "location": "west la",
+      "id": 128
     }
   ]
 }

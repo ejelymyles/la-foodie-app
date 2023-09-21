@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function RestaurantForm({ newResy }){
 
-    const [addNewForm, setAddNewForm] = useState({
+    const [formData, setFormData] = useState({
         name: "",
         cuisine: "",
         price: "",
@@ -10,14 +10,14 @@ function RestaurantForm({ newResy }){
     });
 
     function handleChange(e){
-        setAddNewForm({
-            ...addNewForm,
+        setFormData({
+            ...formData,
             [e.target.name]: e.target.value,
         }) 
     }
 
 
-    function handleAddNewForm (e){
+    function handleSubmit (e){
         e.preventDefault();
         fetch("http://localhost:3000/restaurants", {
             method: "POST",
@@ -25,16 +25,16 @@ function RestaurantForm({ newResy }){
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                "name": addNewForm.name,
-                "cuisine": addNewForm.cuisine,
-                "price": addNewForm.price,
-                "location": addNewForm.location,
+                "name": formData.name,
+                "cuisine": formData.cuisine,
+                "price": formData.price,
+                "location": formData.location,
             })
         })
         .then((r) => r.json())
         .then((newPlace) => newResy(newPlace));
 
-        setAddNewForm({
+        setFormData({
             name: "",
             cuisine: "",
             price: "",
@@ -46,18 +46,18 @@ function RestaurantForm({ newResy }){
     return(
         <div>
             <p className="add-message">Please use the form below to add more restaraunts to the directory</p>
-            <form className="add-new-form" onSubmit={handleAddNewForm}>
+            <form className="add-new-form" onSubmit={handleSubmit}>
                 <div>
                     <label className="add-new-label">Name</label>
-                    <input type="text" name="name" className="form-input2" value={addNewForm.name} onChange={handleChange} />
+                    <input type="text" name="name" className="form-input2" value={formData.name} onChange={handleChange} />
                 </div>
                 <div>
                     <label className="add-new-label">Cuisine</label>
-                    <input type="text" name="cuisine" className="form-input2" value={addNewForm.cuisine} onChange={handleChange}/>
+                    <input type="text" name="cuisine" className="form-input2" value={formData.cuisine} onChange={handleChange}/>
                 </div>
                 <div>
                     <label className="add-new-label">Price</label>
-                    <select name="price" className="form-input2" value={addNewForm.price} onChange={handleChange}>
+                    <select name="price" className="form-input2" value={formData.price} onChange={handleChange}>
                         <option value=""></option>
                         <option value="$">$</option>
                         <option value="$$">$$</option>
@@ -67,7 +67,7 @@ function RestaurantForm({ newResy }){
                 </div>
                 <div>
                     <label className="add-new-label">Location</label>
-                    <select name="location" className="form-input2" value={addNewForm.location} onChange={handleChange}>
+                    <select name="location" className="form-input2" value={formData.location} onChange={handleChange}>
                         <option value=""></option>
                         <option value="downtown">Downtown</option>
                         <option value="west la">West LA</option>

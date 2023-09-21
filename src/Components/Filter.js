@@ -98,7 +98,7 @@ function Filter(){
         </form>
         
         <div className="cards card-container">
-            {filteredData.map((restaurant) => (<RestaurantCard key={restaurant.id} restaurant={restaurant} />))}
+            {filteredData.map((restaurant) => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)}
         </div>
       </div>
     );
