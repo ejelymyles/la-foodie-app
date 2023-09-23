@@ -46,8 +46,8 @@ The data was constructed manually and represents real-life restaurants located i
 1. App - renders child components
 2. Header - renders header & NavBar
 3. NavBar - renders client-side routes
-4. Filter - renders search bar
-5. RestaurantPage - renders restaurant list
+4. Filter - renders a search form & displays filtered results via restaraunt cards
+5. RestaurantPage - renders restaurant list via restaurant cards
 6. RestaurantForm - renders a form to add more restaurants
 7. RestaurantCard - renders each individual restaurant card
 
