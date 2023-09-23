@@ -9,7 +9,10 @@ function Filter({ restaurants }){
         price: "",
     });
 
-    const[searchData, setSearchData] = useState([]);
+    const[cuisine, setCuisine] = useState("All");
+    const[location, setLocation] = useState("All");
+    const[price, setPrice] = useState("All");
+    
 
     function handleChange(e){
         setFormData({
@@ -18,18 +21,21 @@ function Filter({ restaurants }){
         })
     }
 
-  
-    function handleSubmit(e){
-        e.preventDefault();
-        const submittedData = restaurants.filter((restaurant) => {
-                return(
-                    (formData.cuisine === "" || formData.cuisine === restaurant.cuisine) &&
-                    (formData.location === "" || formData.location === restaurant.location) &&
-                    (formData.price === "" || formData.price === restaurant.price) 
-                )});
-            setSearchData(submittedData)
+    const submittedData = restaurants.filter((restaurant) => {
+        return(
+            (cuisine === "" || restaurant.cuisine === cuisine) &&
+            (location === "" || restaurant.location === location) &&
+            (price === "" || restaurant.price === price) 
+        )});
 
-            setFormData({
+   
+        function handleSubmit(e){
+        e.preventDefault();
+        setCuisine(formData.cuisine);
+        setLocation(formData.location);
+        setPrice(formData.price);
+        
+        setFormData({
                 cuisine: "",
                 location: "",
                 price: "",
@@ -91,7 +97,7 @@ function Filter({ restaurants }){
         </form>
         
         <div className="cards card-container">
-            {searchData.map((restaurant) => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)}
+            {submittedData.map((restaurant) => <RestaurantCard key={restaurant.id} restaurant={restaurant} />)}
         </div>
       </div>
     );
